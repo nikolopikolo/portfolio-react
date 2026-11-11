@@ -1,0 +1,232 @@
+.code-window {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background-color: #11141A;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 178, 115, 0.08);
+  overflow: hidden;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.code-window:hover {
+  border-color: rgba(56, 178, 115, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(56, 178, 115, 0.15);
+  transform: translateY(-3px);
+}
+
+.code-window-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(56, 178, 115, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Header */
+.code-window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  background-color: #0E1015;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  z-index: 1;
+}
+
+.code-window-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 54px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot--red {
+  background-color: #EF4444;
+  opacity: 0.8;
+}
+
+.dot--yellow {
+  background-color: #F59E0B;
+  opacity: 0.8;
+}
+
+.dot--green {
+  background-color: #10B981;
+  opacity: 0.8;
+}
+
+/* Tabs */
+.code-window-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.code-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.code-tab:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.code-tab--active {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.code-tab--active .tab-icon {
+  color: var(--accent-primary);
+}
+
+.code-copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.code-copy-btn:hover {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.copied-icon {
+  color: var(--accent-primary);
+}
+
+/* Body */
+.code-window-body {
+  padding: 1.25rem 1.35rem;
+  min-height: 280px;
+  overflow-x: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.code-content {
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  line-height: 1.65;
+  color: #D1D5DB;
+  margin: 0;
+}
+
+/* Syntax Highlighting */
+.token-comment {
+  color: #6B7280;
+  font-style: italic;
+}
+
+.token-keyword {
+  color: #F472B6;
+}
+
+.token-variable {
+  color: #93C5FD;
+}
+
+.token-type {
+  color: #FBBF24;
+}
+
+.token-property {
+  color: #E2E8F0;
+}
+
+.token-string {
+  color: #A7F3D0;
+}
+
+.token-accent {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+/* Terminal style */
+.terminal-content {
+  color: #CBD5E1;
+}
+
+.term-prompt {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.term-dim {
+  color: #64748B;
+}
+
+.term-info {
+  color: #93C5FD;
+  font-weight: 500;
+}
+
+.term-accent {
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+.term-success {
+  color: #34D399;
+}
+
+/* Footer / Status bar */
+.code-window-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.85rem;
+  background-color: #0C0E13;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-divider {
+  opacity: 0.4;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 6px var(--accent-primary);
+}
+

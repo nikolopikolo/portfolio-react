@@ -1,0 +1,451 @@
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.project-card:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 178, 115, 0.1);
+}
+
+/* Visual Banner Area */
+.project-banner {
+  height: 190px;
+  background-color: #0E1217;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.banner-mesh-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.project-card:hover .banner-mesh-glow {
+  opacity: 0.9;
+  transform: scale(1.15);
+}
+
+.banner-graphic-mockup {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* PixelGallery Mockup Styles */
+.mockup-phone {
+  width: 140px;
+  height: 140px;
+  background: #151A22;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.mockup-notch {
+  width: 32px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  margin: 0 auto 6px;
+}
+
+.mockup-screen {
+  flex: 1;
+  background: #0D0F13;
+  border-radius: 12px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mockup-gallery-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-light);
+}
+
+.mockup-accent-icon {
+  color: var(--accent-primary);
+}
+
+.mockup-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  flex: 1;
+}
+
+.mockup-tile {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  position: relative;
+}
+
+.mockup-tile--active {
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-glow-strong);
+}
+
+.mockup-watch {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #151A22;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.mockup-watch-screen {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0D0F13;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.mockup-watch-tile {
+  width: 22px;
+  height: 12px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-glow);
+  border-radius: 2px;
+}
+
+/* Fundory Budget Card Mockup */
+.mockup-budget-card {
+  width: 250px;
+  background: #141922;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.budget-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.budget-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #60A5FA;
+  letter-spacing: 0.05em;
+}
+
+.budget-saved {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-light);
+  background: var(--accent-subtle);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.budget-amount {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.budget-progress-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.budget-progress-bar {
+  width: 71%;
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6, var(--accent-primary));
+  border-radius: 3px;
+}
+
+.budget-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+.budget-status {
+  color: var(--accent-light);
+}
+
+/* AFTERMATH Mockup */
+.mockup-survival-hud {
+  width: 250px;
+  background: rgba(14, 18, 23, 0.95);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hud-compass {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.hud-compass-icon {
+  color: #FBBF24;
+}
+
+.hud-azimuth {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #FBBF24;
+  letter-spacing: 0.1em;
+}
+
+.hud-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.hud-stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.hud-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  width: 48px;
+}
+
+.hud-bar {
+  flex: 1;
+  height: 5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-bar--health::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 82%;
+  background: #EF4444;
+}
+
+.hud-bar--stamina::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 65%;
+  background: #F59E0B;
+}
+
+.hud-bar--temp::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 48%;
+  background: #3B82F6;
+}
+
+/* Card Content */
+.project-card-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.project-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.02em;
+}
+
+.project-description {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Features List */
+.project-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.35rem;
+  padding: 0.75rem 0.85rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.project-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: #CBD5E1;
+  line-height: 1.4;
+}
+
+.feature-bullet {
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Tech Pills */
+.project-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+/* Card Footer */
+.project-card-footer {
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-light);
+  transition: all var(--transition-fast);
+}
+
+.project-link-btn:hover {
+  color: #FFFFFF;
+}
+
+.link-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.project-link-btn:hover .link-arrow {
+  transform: translate(2px, -2px);
+}
+
+.project-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.status-dot--green {
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 6px var(--accent-primary);
+}
+
+.status-dot--blue {
+  background-color: #3B82F6;
+  box-shadow: 0 0 6px #3B82F6;
+}
+
+.status-dot--amber {
+  background-color: #F59E0B;
+  box-shadow: 0 0 6px #F59E0B;
+}
+

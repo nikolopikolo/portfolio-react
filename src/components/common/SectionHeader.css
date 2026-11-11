@@ -1,0 +1,67 @@
+.section-header {
+  margin-bottom: 3rem;
+  max-width: 680px;
+}
+
+.section-header--centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-header--centered .section-eyebrow {
+  justify-content: center;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-glow);
+  border-radius: var(--radius-full);
+}
+
+.section-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-primary);
+  animation: pulseDot 2.4s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
